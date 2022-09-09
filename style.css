@@ -104,8 +104,7 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 100vh;
-  overflow-y: auto; }
+  min-height: 100vh; }
 
 .right-container--overlaid {
   max-height: 100vh;
