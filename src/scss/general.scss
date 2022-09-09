@@ -5,6 +5,9 @@ html {
 	font-family: TT Lakes, sans-serif;
 	box-sizing: border-box;
 }
+::-webkit-scrollbar {
+	position: absolute;
+}
 * {
 	box-sizing: inherit;
 	margin: 0;
@@ -62,6 +65,12 @@ li {
 			display: block;
 		}
 	}
+}
+.right-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
 }
 
 @media (min-width: 1120px) {
