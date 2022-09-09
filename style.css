@@ -676,6 +676,12 @@ textarea {
       align-self: center;
       margin-left: 8px; }
 
+@media (min-width: 340px) {
+  .prices__commercial-offer {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content; } }
+
 @media (min-width: 768px) {
   .prices__swiper-container {
     padding-right: 0; }
@@ -723,11 +729,7 @@ textarea {
   .prices__disclaimer {
     width: 420px; }
   .prices .swiper-pagination {
-    margin: 0; }
-  .prices__commercial-offer {
-    max-width: -webkit-max-content;
-    max-width: -moz-max-content;
-    max-width: max-content; } }
+    margin: 0; } }
 
 @media (min-width: 1120px) {
   .prices__list {
