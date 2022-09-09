@@ -16,42 +16,42 @@ expandCPSButton.addEventListener('click', function () {
   }
 })
 
-let brandsList = document.querySelector('.brands-repair__list')
-let expandBrandsButton = document.querySelector('.brands-repair__expand-button')
+let brandsList = document.querySelector('.brands-repair .section__list')
+let expandBrandsButton = document.querySelector(
+  '.brands-repair .section__expand-button'
+)
 let expandBrandsText = document.querySelector(
-  '.brands-repair__expand-description'
+  '.brands-repair .section__expand-description'
 )
 
 expandBrandsButton.addEventListener('click', function () {
-  if (brandsList.classList.contains('brands-repair__list--expanded')) {
-    brandsList.classList.remove('brands-repair__list--expanded')
-    expandBrandsButton.classList.remove('brands-repair__expand-button--rotated')
+  if (brandsList.classList.contains('section__list--expanded')) {
+    brandsList.classList.remove('section__list--expanded')
+    expandBrandsButton.classList.remove('section__expand-button--rotated')
     expandBrandsText.textContent = 'Показать все'
   } else {
-    brandsList.classList.add('brands-repair__list--expanded')
-    expandBrandsButton.classList.add('brands-repair__expand-button--rotated')
+    brandsList.classList.add('section__list--expanded')
+    expandBrandsButton.classList.add('section__expand-button--rotated')
     expandBrandsText.textContent = 'Скрыть'
   }
 })
 
-let devicesList = document.querySelector('.devices-repair__list')
+let devicesList = document.querySelector('.devices-repair .section__list')
 let expandDevicesButton = document.querySelector(
-  '.devices-repair__expand-button'
+  '.devices-repair .section__expand-button'
 )
 let expandDevicesText = document.querySelector(
-  '.devices-repair__expand-description'
+  '.devices-repair .section__expand-description'
 )
 
 expandDevicesButton.addEventListener('click', function () {
-  if (devicesList.classList.contains('devices-repair__list--expanded')) {
-    devicesList.classList.remove('devices-repair__list--expanded')
-    expandDevicesButton.classList.remove(
-      'devices-repair__expand-button--rotated'
-    )
+  if (devicesList.classList.contains('section__list--expanded')) {
+    devicesList.classList.remove('section__list--expanded')
+    expandDevicesButton.classList.remove('section__expand-button--rotated')
     expandDevicesText.textContent = 'Показать все'
   } else {
-    devicesList.classList.add('devices-repair__list--expanded')
-    expandDevicesButton.classList.add('devices-repair__expand-button--rotated')
+    devicesList.classList.add('section__list--expanded')
+    expandDevicesButton.classList.add('section__expand-button--rotated')
     expandDevicesText.textContent = 'Скрыть'
   }
 })
@@ -65,14 +65,12 @@ let closeButton = document.querySelector('.sidebar-header__left-group button')
 
 burger.addEventListener('click', function () {
   sidebar.classList.add('sidebar--shown')
-  rightContainer.style.maxHeight = '100vh'
-  rightContainer.style.overflow = 'hidden'
+  rightContainer.classList.add('right-container--overlaid')
 })
 
 closeButton.addEventListener('click', function () {
   sidebar.classList.remove('sidebar--shown')
-  rightContainer.style.maxHeight = 'none'
-  rightContainer.style.overflow = 'visible'
+  rightContainer.classList.remove('right-container--overlaid')
 })
 
 sidebar.addEventListener('click', function (evt) {
@@ -81,8 +79,7 @@ sidebar.addEventListener('click', function (evt) {
     !evt.target.closest('.sidebar__content')
   ) {
     sidebar.classList.remove('sidebar--shown')
-    rightContainer.style.maxHeight = 'none'
-    rightContainer.style.overflow = 'visible'
+    rightContainer.classList.remove('right-container--overlaid')
   }
 })
 
@@ -99,22 +96,17 @@ let feedbackCloseButton = document.querySelector('.feedback > * > button')
 
 feedbackHeaderButton.addEventListener('click', function () {
   feedback.classList.add('modal--shown')
-  rightContainer.style.maxHeight = '100vh'
-  rightContainer.style.overflow = 'hidden'
+  rightContainer.classList.add('right-container--overlaid')
 })
 
 feedbackSidebarButton.addEventListener('click', function () {
   feedback.classList.add('modal--shown')
-  rightContainer.style.maxHeight = '100vh'
-  rightContainer.style.overflow = 'hidden'
+  rightContainer.classList.add('right-container--overlaid')
 })
 
 feedbackCloseButton.addEventListener('click', function () {
   feedback.classList.remove('modal--shown')
-  rightContainer.style.maxHeight = 'none'
-  rightContainer.style.overflow = 'visible'
-  sidebar.style.maxHeight = 'none'
-  sidebar.style.overflow = 'visible'
+  rightContainer.classList.remove('right-container--overlaid')
 })
 
 feedback.addEventListener('click', function (evt) {
@@ -123,10 +115,7 @@ feedback.addEventListener('click', function (evt) {
     !evt.target.closest('.modal__content')
   ) {
     feedback.classList.remove('modal--shown')
-    rightContainer.style.maxHeight = 'none'
-    rightContainer.style.overflow = 'visible'
-    sidebar.style.maxHeight = 'none'
-    sidebar.style.overflow = 'visible'
+    rightContainer.classList.remove('right-container--overlaid')
   }
 })
 
@@ -143,22 +132,17 @@ let callCloseButton = document.querySelector('.call > * > button')
 
 callHeaderButton.addEventListener('click', function () {
   call.classList.add('modal--shown')
-  rightContainer.style.maxHeight = '100vh'
-  rightContainer.style.overflow = 'hidden'
+  rightContainer.classList.add('right-container--overlaid')
 })
 
 callSidebarButton.addEventListener('click', function () {
   call.classList.add('modal--shown')
-  rightContainer.style.maxHeight = '100vh'
-  rightContainer.style.overflow = 'hidden'
+  rightContainer.classList.add('right-container--overlaid')
 })
 
 callCloseButton.addEventListener('click', function () {
   call.classList.remove('modal--shown')
-  rightContainer.style.maxHeight = 'none'
-  rightContainer.style.overflow = 'visible'
-  sidebar.style.maxHeight = 'none'
-  sidebar.style.overflow = 'visible'
+  rightContainer.classList.remove('right-container--overlaid')
 })
 
 call.addEventListener('click', function (evt) {
@@ -167,9 +151,6 @@ call.addEventListener('click', function (evt) {
     !evt.target.closest('.modal__content')
   ) {
     call.classList.remove('modal--shown')
-    rightContainer.style.maxHeight = 'none'
-    rightContainer.style.overflow = 'visible'
-    sidebar.style.maxHeight = 'none'
-    sidebar.style.overflow = 'visible'
+    rightContainer.classList.remove('right-container--overlaid')
   }
 })

@@ -4,9 +4,7 @@ html {
 	color: #1B1C21;
 	font-family: TT Lakes, sans-serif;
 	box-sizing: border-box;
-}
-::-webkit-scrollbar {
-	position: absolute;
+	overflow-y: scroll;
 }
 * {
 	box-sizing: inherit;
@@ -66,11 +64,18 @@ li {
 		}
 	}
 }
+textarea {
+	resize: none;
+}
 .right-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	min-height: 100vh;
+}
+.right-container--overlaid {
+    max-height: 100vh;
+    overflow: hidden;
 }
 
 @media (min-width: 1120px) {

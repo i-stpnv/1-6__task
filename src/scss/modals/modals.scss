@@ -19,7 +19,7 @@
 .modal__content {
     position: relative;
     padding: 24px 16px;
-	width: 320px;
+	width: 100vw;
     height: 100vh;
 	background-color: #FFFFFF;
 	overflow-y: auto;
@@ -87,11 +87,16 @@
     text-transform: uppercase;
 }
 
-@media (min-width: 440px) {
+@media (min-width: 520px) {
+    .modal__content {
+        width: 440px;
+        overflow-y: visible;
+    }
     .modal__icon {
         position: absolute;
         left: -60px;
         top: 48px;
+        z-index: 30;
     }
     .modal__title {
         margin-top: 24px;

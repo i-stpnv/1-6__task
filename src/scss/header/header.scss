@@ -18,6 +18,7 @@
 	flex-direction: row;
 	flex-wrap: nowrap;
 	align-items: center;
+	padding: 18px 0 17px;
 }
 .header__main-nav {
 	display: flex;
@@ -50,7 +51,6 @@
 	gap: 16px;
 }
 .logo {
-	margin: 18px 0 17px;
 	height: 52px;
 }
 .icon {
@@ -113,6 +113,7 @@
 	.header__navigation {
 		justify-content: flex-end;
 		margin: 42px 32px 0 0;
+		padding: 0;
 	}
 	.options__order-options {
 		.options__option-group {
@@ -122,6 +123,9 @@
 	}
 	.header__main-nav {
 		display: none;
+	}
+	.header__options {
+		margin-right: 0;
 	}
 	.options__personal-options {
 		display: none;
