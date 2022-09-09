@@ -96,6 +96,12 @@
     }
 }
 
+@media (min-width: 340px) {
+    .prices__commercial-offer {
+        max-width: max-content;
+    }
+}
+
 @media (min-width: 768px) {
 	.prices__swiper-container {
 		padding-right: 0;
@@ -161,9 +167,6 @@
     }
     .prices .swiper-pagination {
         margin: 0;
-    }
-    .prices__commercial-offer {
-        max-width: max-content;
     }
 }
 
